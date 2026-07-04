@@ -1,0 +1,266 @@
+<title>Privacy Policy — Termi.</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #090E09;
+    --surface: #111A11;
+    --accent:  #39FF14;
+    --body:    #B8CDB8;
+    --dim:     #4D6B4D;
+    --border:  #1C311C;
+    --err:     #FF5050;
+    --mono: 'Courier New', Courier, monospace;
+  }
+
+  html, body { background: var(--bg); }
+
+  html { color: var(--body); font-family: var(--mono); font-size: 14px; }
+
+  body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .masthead {
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+    margin-bottom: 40px;
+  }
+  .masthead-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .masthead-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .masthead-meta {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--dim);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  /* ── Sections ── */
+  .section {
+    margin-bottom: 36px;
+    border-left: 2px solid var(--border);
+    padding-left: 20px;
+  }
+  .section-head {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-head::before {
+    content: '>';
+    color: var(--dim);
+    font-weight: normal;
+  }
+  .section-head::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    margin-left: 8px;
+  }
+
+  p { margin-bottom: 12px; color: var(--body); }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── Callout box ── */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--body);
+    line-height: 1.7;
+  }
+  .callout strong { color: var(--accent); font-weight: bold; }
+
+  /* ── Data table ── */
+  .data-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    padding: 10px 0;
+    font-size: 13px;
+  }
+  .data-row:last-child { border-bottom: 1px solid var(--border); }
+  .data-key { color: var(--dim); padding-right: 16px; }
+  .data-val { color: var(--body); }
+  .data-val .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    margin-left: 6px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  .tag.local { border-color: #1C311C; color: #4D8B4D; }
+  .tag.third  { border-color: #3B2A1C; color: #8B6040; }
+  .tag.opt    { border-color: #1C2E3B; color: #406080; }
+
+  /* ── Contact block ── */
+  .contact-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    font-size: 13px;
+  }
+  .contact-block a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-block a:hover { border-bottom-color: var(--accent); }
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 500px) {
+    body { padding: 28px 16px 60px; }
+    .data-row { grid-template-columns: 1fr; gap: 2px; }
+    .masthead { padding: 18px 18px; }
+    .masthead-meta { flex-direction: column; gap: 4px; }
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead-label">Privacy Policy</div>
+  <div class="masthead-title">Termi.</div>
+  <div class="masthead-meta">
+    <span>EFFECTIVE: JULY 3, 2026</span>
+    <span>VERSION: 1.0</span>
+    <span>DEVELOPER: LYNK STUDIOS</span>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>The short version:</strong> Termi stores everything on your device. The only data that ever leaves your phone is your listening history — and only if you choose to connect a Last.fm account.
+</div>
+
+<div class="section">
+  <div class="section-head">What We Collect</div>
+  <div class="data-row">
+    <div class="data-key">Music library</div>
+    <div class="data-val">Stored on your device only <span class="tag local">LOCAL</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">EPUB books</div>
+    <div class="data-val">Stored on your device only <span class="tag local">LOCAL</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">Writing documents</div>
+    <div class="data-val">Stored on your device only <span class="tag local">LOCAL</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">Reading &amp; listening stats</div>
+    <div class="data-val">Stored on your device only <span class="tag local">LOCAL</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">App settings &amp; themes</div>
+    <div class="data-val">Stored on your device only <span class="tag local">LOCAL</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">Last.fm listening history</div>
+    <div class="data-val">Sent to Last.fm if you connect an account <span class="tag third">3RD PARTY</span> <span class="tag opt">OPT-IN</span></div>
+  </div>
+  <div class="data-row">
+    <div class="data-key">Purchase receipts</div>
+    <div class="data-val">Handled entirely by Apple <span class="tag third">APPLE</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">Last.fm Integration</div>
+  <p>Termi offers optional Last.fm scrobbling. If you connect your Last.fm account, the app will send track metadata (song title, artist, album) to Last.fm's servers as you listen. This is entirely opt-in — the feature is off by default and can be disconnected at any time in Settings.</p>
+  <p>Your Last.fm credentials are stored locally on your device using a secure session token. We never see your Last.fm password. Last.fm's own privacy policy governs how they handle your scrobble data.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">WiFi Transfer</div>
+  <p>The WiFi Transfer feature runs a local HTTP server on your device so you can send files from a computer on the same network. All transfers happen locally — files go directly from your computer to your device. No data passes through any external server.</p>
+  <p>The server is off by default and only runs when you explicitly start it. A one-time PIN is required for each session.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">In-App Purchases</div>
+  <p>Purchases are processed entirely by Apple through StoreKit. Termi does not collect, store, or transmit any payment information. Purchase receipts are validated on-device through Apple's standard APIs.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">Analytics &amp; Crash Reporting</div>
+  <p>Termi contains no third-party analytics SDKs, no crash reporting services, and no advertising frameworks. We collect no telemetry about how you use the app.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">Children's Privacy</div>
+  <p>Termi does not knowingly collect any personal information from children under 13. The app contains no features designed to collect data from minors.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">Your Data, Your Device</div>
+  <p>All content you import into Termi — music files, EPUB books, writing documents — is stored in your device's app sandbox. You can delete any or all of it at any time from within the app. Deleting the app removes all locally stored data.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">Changes to This Policy</div>
+  <p>If this policy changes materially, we'll update the effective date at the top and note what changed. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+</div>
+
+<div class="section">
+  <div class="section-head">Contact</div>
+  <div class="contact-block">
+    <div class="contact-label">Questions or requests</div>
+    <p>Reach out at <a href="mailto:termi.app.cs@gmail.com">termi.app.cs@gmail.com</a> for any privacy-related questions or to request deletion of any data associated with your use of the app.</p>
+  </div>
+</div>
+
+<footer>
+  <span>TERMI. BY LYNK STUDIOS — PRIVACY POLICY v1.0</span>
+  <span>EFFECTIVE JULY 3, 2026</span>
+</footer>
