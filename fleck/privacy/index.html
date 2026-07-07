@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fleck — Privacy Policy</title>
+<style>
+  :root {
+    --indigo: #6366F1;
+    --rose: #F43F5E;
+    --orange: #F97316;
+    --lime: #84CC16;
+    --teal: #14B8A6;
+    --bg: #F4F5FD;
+    --card: #FFFFFF;
+    --text: #1C1C28;
+    --text-secondary: #6B6B7B;
+    --border: rgba(99, 102, 241, 0.10);
+    --shadow: rgba(28, 28, 40, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E0E14;
+      --card: #1A1A24;
+      --text: #F2F2F7;
+      --text-secondary: #9A9AA8;
+      --border: rgba(99, 102, 241, 0.18);
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 32px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+
+  /* Header */
+  header { text-align: center; padding: 24px 0 8px; }
+  .orbs { width: 132px; height: 96px; margin: 0 auto 22px; display: block; }
+  h1 {
+    font-size: 34px; font-weight: 800; letter-spacing: -0.02em;
+    background: linear-gradient(120deg, var(--indigo), var(--teal));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { font-size: 19px; font-weight: 600; color: var(--text); margin-top: 6px; }
+  .updated { font-size: 14px; color: var(--text-secondary); margin-top: 10px; }
+
+  /* Intro */
+  .lede {
+    font-size: 17px; color: var(--text-secondary);
+    text-align: center; margin: 22px auto 8px; max-width: 520px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px 24px;
+    margin-top: 18px;
+    box-shadow: 0 6px 24px var(--shadow);
+  }
+  .card h2 {
+    font-size: 19px; font-weight: 700; letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+  .card p { color: var(--text-secondary); font-size: 16px; }
+  .card p + p { margin-top: 12px; }
+  .card strong { color: var(--text); font-weight: 600; }
+  ul { list-style: none; margin-top: 10px; }
+  li { color: var(--text-secondary); font-size: 16px; padding-left: 24px; position: relative; margin-top: 8px; }
+  li::before {
+    content: ""; position: absolute; left: 4px; top: 10px;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--indigo); opacity: 0.6;
+  }
+  a { color: var(--indigo); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+
+  footer { text-align: center; margin-top: 40px; color: var(--text-secondary); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg class="orbs" viewBox="0 0 132 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="42"  cy="34" r="26" fill="var(--rose)"/>
+      <circle cx="94"  cy="30" r="20" fill="var(--orange)"/>
+      <circle cx="40"  cy="70" r="20" fill="var(--teal)"/>
+      <circle cx="70"  cy="56" r="24" fill="var(--lime)"/>
+      <circle cx="98"  cy="66" r="22" fill="var(--indigo)"/>
+    </svg>
+    <h1>Fleck</h1>
+    <div class="subtitle">Privacy Policy</div>
+    <div class="updated">Last updated: July 5, 2026</div>
+  </header>
+
+  <p class="lede">Fleck is a private micro-journal. Your entries are yours — they live on your device, and we built Fleck so we can't read them.</p>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--teal)"></span>Your entries stay yours</h2>
+    <p>Everything you write in Fleck — your mood, notes, feeling tags, and any photos — is stored <strong>on your device</strong>. If you're signed in to iCloud, Fleck syncs it privately across your devices using Apple's <strong>iCloud (CloudKit)</strong>, into <strong>your own private iCloud account</strong>.</p>
+    <p>That data is stored in your iCloud space and is not accessible to us. Fleck has <strong>no account, no login, and no server that holds your journal.</strong> We never see your entries.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--indigo)"></span>AI insights — only if you turn them on</h2>
+    <p>AI insights are <strong>off by default</strong> and require your explicit opt-in. If you enable them, the text and mood of the relevant entries are sent over a secure connection to our AI provider (<strong>OpenAI</strong>) to generate your insight.</p>
+    <p>Your entries are <strong>never used to train AI models</strong>. The provider may retain the request briefly to guard against abuse, then deletes it. We also send a random, anonymous identifier (not tied to your name or account) purely to prevent abuse of the service.</p>
+    <p>You can turn AI off at any time in <strong>Settings</strong>. With it off, nothing from your journal ever leaves your device. <strong>Photos are never sent for AI processing.</strong> Insights are meant for reflection — they are not medical or mental-health advice.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--rose)"></span>What we don't do</h2>
+    <ul>
+      <li>No accounts, no email or sign-up required.</li>
+      <li>No advertising and no ad trackers.</li>
+      <li>We never sell or share your data.</li>
+      <li>No third-party analytics or usage tracking.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--orange)"></span>Purchases</h2>
+    <p>Optional Premium subscriptions and tips are processed by <strong>Apple</strong> and managed through <strong>RevenueCat</strong>, which tell Fleck whether a purchase is active. We do not receive your payment details. Purchases are tied to your Apple ID, not to any Fleck account.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--lime)"></span>Notifications</h2>
+    <p>Reminders are scheduled <strong>locally on your device</strong>. They never leave it, and they're entirely optional.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--teal)"></span>Deleting your data</h2>
+    <p>Delete any entry inside Fleck and it's removed from your device and your iCloud. You can export all of your entries at any time from <strong>Settings</strong>. Removing the app, or turning off iCloud for Fleck, removes the synced copy per Apple's iCloud controls.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--indigo)"></span>Children</h2>
+    <p>Fleck is not directed at children under 13, and we do not knowingly collect information from them.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="dot" style="background: var(--orange)"></span>Changes &amp; contact</h2>
+    <p>If this policy changes, we'll update the date at the top of this page. Questions about privacy? Email us at <a href="mailto:lynksdomain@gmail.com">lynksdomain@gmail.com</a>.</p>
+  </div>
+
+  <footer>Fleck · An independent app</footer>
+
+</div>
+</body>
+</html>
