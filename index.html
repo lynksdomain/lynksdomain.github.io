@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lynk's Domain — Independent apps, private by design</title>
+<meta name="description" content="Lynk's Domain is a small independent studio building focused, privacy-respecting apps — no accounts, no tracking. Makers of Termi and Fleck.">
+<style>
+  :root {
+    --bg: #F6F6F4;
+    --ink: #16161A;
+    --dim: #70707C;
+    --hair: rgba(22, 22, 26, 0.10);
+    --card: #FFFFFF;
+    --border: rgba(22, 22, 26, 0.08);
+    --shadow: rgba(22, 22, 26, 0.06);
+    /* product accents (used only inside cards) */
+    --indigo: #6366F1;
+    --teal: #14B8A6;
+    --term-bg: #0D1117;
+    --term-green: #4ADE80;
+    --term-dim: #8B949E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B0B0E;
+      --ink: #F1F1F4;
+      --dim: #9494A0;
+      --hair: rgba(255, 255, 255, 0.12);
+      --card: #17171C;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 64px 20px 72px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  /* Hero — neutral, studio-level */
+  header { text-align: center; }
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--dim); margin-bottom: 18px;
+  }
+  h1 { font-size: 42px; font-weight: 800; letter-spacing: -0.035em; color: var(--ink); }
+  .rule { width: 40px; height: 3px; background: var(--ink); border-radius: 2px; margin: 20px auto 0; opacity: 0.85; }
+  .tagline { font-size: 19px; color: var(--dim); margin-top: 20px; font-weight: 500; }
+  .intro {
+    font-size: 17px; color: var(--dim); text-align: center;
+    max-width: 540px; margin: 20px auto 0; line-height: 1.65;
+  }
+  .intro strong { color: var(--ink); font-weight: 600; }
+
+  /* Projects */
+  .projects { margin-top: 48px; display: grid; gap: 20px; }
+  .card { border-radius: 22px; padding: 26px; box-shadow: 0 8px 30px var(--shadow); }
+  .card h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+  .card p { margin-top: 8px; font-size: 15.5px; line-height: 1.6; }
+  .links { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn { font-size: 14px; font-weight: 600; text-decoration: none; padding: 9px 16px; border-radius: 11px; display: inline-block; }
+  .soon { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim); }
+
+  /* Fleck card — soft, rounded, indigo */
+  .fleck { background: var(--card); border: 1px solid var(--border); }
+  .fleck .orbs { display: flex; gap: 6px; margin-bottom: 16px; }
+  .fleck .orbs span { width: 15px; height: 15px; border-radius: 50%; }
+  .fleck h2 {
+    font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+    background: linear-gradient(120deg, var(--indigo), var(--teal));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .fleck p { color: var(--dim); }
+  .fleck .btn { background: rgba(99,102,241,0.12); color: var(--indigo); }
+  .fleck .btn:hover { background: rgba(99,102,241,0.2); }
+
+  /* Termi card — terminal */
+  .termi { background: var(--term-bg); border: 1px solid rgba(255,255,255,0.08); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .termi .prompt { color: var(--term-green); font-size: 13px; margin-bottom: 14px; }
+  .termi .prompt::before { content: "~ "; color: var(--term-dim); }
+  .termi h2 { color: #E6EDF3; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-weight: 700; }
+  .termi p { color: var(--term-dim); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 14px; }
+  .termi .btn { background: transparent; color: var(--term-green); border: 1px solid rgba(74,222,128,0.4); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .termi .btn:hover { background: rgba(74,222,128,0.12); }
+
+  /* Contact + footer — neutral */
+  .contact { text-align: center; margin-top: 48px; font-size: 16px; color: var(--dim); }
+  .contact a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--hair); padding-bottom: 1px; font-weight: 600; }
+  .contact a:hover { border-bottom-color: var(--ink); }
+  footer { text-align: center; margin-top: 44px; font-size: 13px; color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Independent Studio</div>
+    <h1>Lynk's Domain</h1>
+    <div class="rule"></div>
+    <div class="tagline">Independent apps, private by design.</div>
+    <p class="intro">A small studio making <strong>focused, thoughtful apps</strong> for people who value their privacy. Everything we build works <strong>on your device</strong> — no accounts, no tracking, no ads.</p>
+  </header>
+
+  <section class="projects">
+
+    <article class="card fleck">
+      <div class="orbs">
+        <span style="background:#F43F5E"></span>
+        <span style="background:#F97316"></span>
+        <span style="background:#84CC16"></span>
+        <span style="background:#14B8A6"></span>
+        <span style="background:#6366F1"></span>
+      </div>
+      <h2>Fleck</h2>
+      <p>A private micro-journal. One mood tap and a sentence — under 30 seconds a day. Opt-in AI quietly surfaces the patterns in what you actually wrote, and your entries stay yours (synced privately through your own iCloud).</p>
+      <div class="links">
+        <a class="btn" href="/fleck/privacy/">Privacy Policy</a>
+        <span class="soon">Coming soon to the App Store</span>
+      </div>
+    </article>
+
+    <article class="card termi">
+      <div class="prompt">termi --about</div>
+      <h2>Termi</h2>
+      <p>A terminal-styled hub for your music, books, and writing. Play your library, read your EPUBs, keep your notes — with local WiFi file transfer and optional Last.fm scrobbling. All on-device.</p>
+      <div class="links">
+        <a class="btn" href="/termi/privacy/">Privacy Policy</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="contact">
+    Get in touch — <a href="mailto:lynksdomain@gmail.com">lynksdomain@gmail.com</a>
+  </div>
+
+  <footer>© 2026 Lynk's Domain</footer>
+
+</div>
+</body>
+</html>
