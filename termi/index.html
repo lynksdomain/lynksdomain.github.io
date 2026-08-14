@@ -31,17 +31,15 @@
   .tagline { font-size: 17px; color: var(--body); margin-top: 16px; max-width: 520px; margin-inline: auto; }
   .tagline strong { color: var(--accent); font-weight: 700; }
 
-  /* Hero demo */
+  /* Hero demo — sized to the real phone-recording aspect ratio (~11:24
+     portrait), not a landscape crop. object-fit: cover is exact here
+     since the box aspect now matches the source, so nothing crops. */
   .demo {
-    margin-top: 36px; border: 1px solid var(--border); background: var(--surface);
-    aspect-ratio: 16/10; max-height: 420px; display: flex; align-items: center; justify-content: center;
+    margin: 36px auto 0; border: 1px solid var(--border); background: var(--surface);
+    aspect-ratio: 11/24; width: 320px; max-height: 640px;
     overflow: hidden; position: relative;
   }
   .demo video, .demo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .demo .placeholder {
-    color: var(--dim); font-size: 13px; text-align: center; padding: 20px; line-height: 1.8;
-  }
-  .demo .placeholder .glyph { color: var(--accent); font-size: 20px; display: block; margin-bottom: 10px; }
 
   /* CTA row */
   .cta-row { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
@@ -71,11 +69,9 @@
   .pillar .label::after { content: ' ]'; color: var(--dim); }
   .pillar p { color: var(--dim); font-size: 13px; line-height: 1.65; margin-bottom: 12px; }
   .pillar .clip {
-    border: 1px solid var(--border); aspect-ratio: 4/5; display: flex; align-items: center;
-    justify-content: center; overflow: hidden; background: #060906;
+    border: 1px solid var(--border); aspect-ratio: 11/24; overflow: hidden; background: #060906;
   }
   .pillar .clip video, .pillar .clip img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .pillar .clip .placeholder { color: var(--dim); font-size: 11px; text-align: center; padding: 10px; }
 
   /* Feature list */
   .features { list-style: none; margin-top: 8px; }
@@ -115,24 +111,10 @@
   <p class="tagline">A terminal for your music, your books, and your words — <strong>one app, three pillars, zero accounts.</strong></p>
 </header>
 
-<!--
-  HERO DEMO — drop a real screen recording in as media/hero.mp4 (and an
-  optional poster frame as media/hero.jpg). Suggested: ~10-15s, portrait
-  or a square-ish crop, muted, showing the boot sequence into the player
-  with the CRT glow visible — that's the single best "what is this app"
-  frame. Autoplay+loop+muted is what makes an <video> act like a GIF
-  without the file-size/quality tradeoff a real GIF forces — a GIF also
-  works here (swap for a plain <img src="media/hero.gif">) if that's
-  easier to produce, just expect a much larger file for the same length.
--->
 <div class="demo">
-  <video autoplay muted loop playsinline poster="media/hero.jpg">
+  <video autoplay muted loop playsinline>
     <source src="media/hero.mp4" type="video/mp4">
   </video>
-  <div class="placeholder">
-    <span class="glyph">[ NO SIGNAL ]</span>
-    drop a demo clip at media/hero.mp4 (or hero.gif)<br>to replace this placeholder
-  </div>
 </div>
 
 <div class="cta-row">
@@ -151,7 +133,6 @@
         <video autoplay muted loop playsinline>
           <source src="media/music.mp4" type="video/mp4">
         </video>
-        <div class="placeholder">media/music.mp4</div>
       </div>
     </div>
     <div class="pillar">
@@ -161,7 +142,6 @@
         <video autoplay muted loop playsinline>
           <source src="media/reading.mp4" type="video/mp4">
         </video>
-        <div class="placeholder">media/reading.mp4</div>
       </div>
     </div>
     <div class="pillar">
@@ -171,7 +151,6 @@
         <video autoplay muted loop playsinline>
           <source src="media/writing.mp4" type="video/mp4">
         </video>
-        <div class="placeholder">media/writing.mp4</div>
       </div>
     </div>
   </div>
@@ -180,19 +159,10 @@
 <div class="section">
   <div class="section-head">Termi Packages</div>
   <p><strong>This is the one nobody else has.</strong> Modern apps optimize away every bit of friction until a "like" is the most intimate thing left. Termi Packages go the other way: build a mixtape from your own library, pin a quote from the book you can't stop talking about, or fold in a page of your own writing — then send it to one specific person the old-fashioned way. Device to device. No server, no account, no cloud in between.</p>
-  <!--
-    Package ritual demo — the dial/discover/accept/transfer sequence is
-    genuinely one of the app's best "wow" moments live. media/package.mp4
-    ideally shows two devices side by side going through the handshake.
-  -->
-  <div class="demo" style="margin-top:24px; aspect-ratio: 16/9; max-height: 340px;">
-    <video autoplay muted loop playsinline poster="media/package.jpg">
+  <div class="demo" style="margin-top:24px;">
+    <video autoplay muted loop playsinline>
       <source src="media/package.mp4" type="video/mp4">
     </video>
-    <div class="placeholder">
-      <span class="glyph">[ NO SIGNAL ]</span>
-      drop the package ritual demo at media/package.mp4
-    </div>
   </div>
   <div class="pillars" style="margin-top:24px;">
     <div class="pillar">
