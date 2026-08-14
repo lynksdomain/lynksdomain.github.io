@@ -83,6 +83,27 @@
   .features li::before { content: '›'; color: var(--accent); font-weight: 700; }
   .features strong { color: var(--accent); }
 
+  /* Aesthetics section */
+  .aes-block { margin-top: 28px; }
+  .aes-block .label { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1px; margin-bottom: 4px; }
+  .aes-block .label::before { content: '[ '; color: var(--dim); }
+  .aes-block .label::after { content: ' ]'; color: var(--dim); }
+  .aes-block > p { color: var(--dim); font-size: 13px; line-height: 1.65; margin-bottom: 16px; max-width: 640px; }
+  .aes-demo {
+    border: 1px solid var(--border); background: #060906;
+    aspect-ratio: 11/24; width: 280px; max-height: 560px;
+    overflow: hidden; margin: 0 auto;
+  }
+  .aes-demo video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .theme-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 8px; }
+  .theme-card { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+  .theme-card img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
+  .theme-card .name {
+    font-size: 10px; letter-spacing: 0.5px; color: var(--dim); text-align: center;
+    padding: 7px 4px; border-top: 1px solid var(--border);
+  }
+
   /* Callout */
   .callout {
     background: var(--surface); border: 1px solid var(--border); padding: 20px 24px;
@@ -100,6 +121,7 @@
     body { padding: 36px 18px 60px; }
     h1 { font-size: 30px; }
     .pillars { grid-template-columns: 1fr; }
+    .theme-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -180,6 +202,60 @@
   </div>
   <div class="callout" style="margin-top:24px;">
     It's not a share button. It's a ritual, and it's built to feel like one.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">Make It Yours</div>
+  <p>The aesthetic isn't decoration on top of Termi — it's half the point. Every screen renders through a real theme engine, and the visualizer is one of five distinct styles, not a single default.</p>
+
+  <div class="aes-block">
+    <div class="label">5 VISUALIZERS</div>
+    <p>Bars, Sparkline, Radial, Waterfall, Matrix Warp — pick the one that matches the song, or the mood.</p>
+    <div class="aes-demo">
+      <video autoplay muted loop playsinline>
+        <source src="media/visualizers.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="aes-block">
+    <div class="label">20 THEMES</div>
+    <p>Amber and green phosphor CRTs, Nord, Dracula, Catppuccin, Solarized, Gruvbox, Tokyo Night, and more — the whole app repaints, not just an accent color.</p>
+    <div class="theme-grid">
+      <div class="theme-card">
+        <img src="media/theme-apple-ii.png" alt="Apple ][ theme" loading="lazy">
+        <div class="name">APPLE ][</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-amber-terminal.png" alt="Amber Terminal theme" loading="lazy">
+        <div class="name">AMBER TERMINAL</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-rose-pine.png" alt="Rosé Pine theme" loading="lazy">
+        <div class="name">ROSÉ PINE</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-nord.png" alt="Nord theme" loading="lazy">
+        <div class="name">NORD</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-catppuccin-mocha.png" alt="Catppuccin Mocha theme" loading="lazy">
+        <div class="name">CATPPUCCIN MOCHA</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-tokyo-night.png" alt="Tokyo Night theme" loading="lazy">
+        <div class="name">TOKYO NIGHT</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-solarized-light.png" alt="Solarized Light theme" loading="lazy">
+        <div class="name">SOLARIZED LIGHT</div>
+      </div>
+      <div class="theme-card">
+        <img src="media/theme-gruvbox-dark.png" alt="Gruvbox Dark theme" loading="lazy">
+        <div class="name">GRUVBOX DARK</div>
+      </div>
+    </div>
   </div>
 </div>
 
